@@ -4,4 +4,4 @@ for a in range(90, 64, -1):
         a = a + 32
         print("{:c}".format(a), end="")
     else:
-        print("{c}".format(a), end="")
+        print("{:c}".format(a), end="")

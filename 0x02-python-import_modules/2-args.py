@@ -5,10 +5,10 @@ if __name__ == "__main__":
     if length == 0:
         print("0 argument.")
     elif length == 1:
-        for i in range:
+        for i in argv:
             print("{:d} argument:".format(length))
-            print("{:d}: {:c}".format(length, argv[a]))
+            print("{:d}: {:c}".format(length, i))
     else:
-        for a in range(length):
+        for a in argv[1:]:
             print("{:d} argument:".format(length))
-            print("{:d}: {:c}".format(length, argv[a]))
+            print("{:d}: {:s}".format(length, a))

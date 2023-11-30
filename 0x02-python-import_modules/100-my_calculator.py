@@ -8,16 +8,16 @@ if __name__ == "__main__":
         exit(1)
 
     a = int(argv[1])
-    operater = argv[2]
+    operator = argv[2]
     b = int(argv[3])
 
-    if operater == "+":
+    if operator == "+":
         print("{} + {} = {}".format(a, b, add(a, b)))
-    elif operater == "-":
+    elif operator == "-":
         print("{} - {} = {}".format(a, b, sub(a, b)))
-    elif operater == "*":
+    elif operator == "*":
         print("{} * {} = {}".format(a, b, mul(a, b)))
-    elif operater == "/":
+    elif operator == "/":
         print("{} / {} = {}".format(a, b, div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")

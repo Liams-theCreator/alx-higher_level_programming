@@ -2,5 +2,6 @@
 def multiple_returns(sentence):
     if sentence is None:
         return None
-    tupile = (len(sentence), sentence[0])
+    length = len(sentence)
+    tupile = (length, sentence[0])
     return tupile

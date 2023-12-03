@@ -1,2 +1,8 @@
 #!/usr/bin/python3
-# not done yet
+def print_matrix_integer(matrix=[[]]):
+    if matrix is None:
+        return None
+    for rows in matrix:
+        for element in rows:
+            print("{}".format(element), end=" ")
+        print()

@@ -4,6 +4,8 @@ def print_matrix_integer(matrix=[[]]):
         return None
     idx = 0
     for rows in matrix:
-        for idx, elements in enumerate(rows):
-            print("{:d}".format(elements), end=" ")
-    print()
+        for idx, element in enumerate(rows):
+            if idx != 0:
+                print(" ", end="")
+            print("{:d}".format(element), end="")
+        print()

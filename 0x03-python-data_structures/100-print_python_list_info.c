@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <Python.h>
+#include <python.h>
 #include <object.h>
 #include <listobject.h>
 

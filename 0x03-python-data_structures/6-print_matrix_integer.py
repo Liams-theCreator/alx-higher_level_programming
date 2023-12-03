@@ -8,4 +8,5 @@ def print_matrix_integer(matrix=[[]]):
             if idx != 0:
                 print(" ", end="")
             print("{:d}".format(element), end="")
+            idx += 1
         print()

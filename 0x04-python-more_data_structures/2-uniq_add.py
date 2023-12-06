@@ -8,4 +8,4 @@ def uniq_add(my_list=[]):
         newlist.add(i)
     for nums in newlist:
         sum += nums
-    return nums
+    return sum

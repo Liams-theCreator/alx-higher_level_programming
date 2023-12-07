@@ -9,7 +9,7 @@ def roman_to_int(roman_string):
     for i in roman_string:
         current = romania[i]
         if current > prev:
-            newin += current - 1 * prev
+            newin += current - (2 * prev)
         else:
             newin += current
         prev = current

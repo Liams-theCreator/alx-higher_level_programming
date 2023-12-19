@@ -1,83 +1,53 @@
-<h1 align="center" >
-<br>
-    <img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" height="50%" width="40%">
-</h1>
+# Project: 0x06. Python - Classes and Objects
 
-<h2 align="center">
-    0x06. Python - Object Oriented Programming 
-</h2>
+## Resources
 
-<p align="center">
-    <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming/commits/main">
-        <img src="https://img.shields.io/github/last-commit/Benkdel/holbertonschool-ing.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub last commit">
-    </a>
-    <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming//issues">
-    <img src="https://img.shields.io/github/issues-raw/Benkdel/holbertonschool-higher_level_programming.svg?style=flat-square&logo=github&logoColor=white"
-         alt="GitHub issues">
-    </a>
-    <a href="https://github.com/Benkdel/holbertonschool-higher_level_programming//pulls">
-    <img src="https://img.shields.io/github/issues-pr-raw/Benkdel/holbertonschool-higher_level_programming.svg?style=flat-square&logo=github&logoColor=white"
-         alt="GitHub pull requests">
-    </a>
-</p>
+#### Read or watch:
 
-<h4 align="center"> 
-    Classes, Inheretance and Polymorphism
-</h4>
+- [Object Oriented Programming](https://intranet.alxswe.com/rltoken/i49z6HxrBGRNnixo7ZWbEQ)
+- [Object-Oriented Programming](https://intranet.alxswe.com/rltoken/qz3KSn154ia4H2DPaabOzg)
+- [Properties vs. Getters and Setters](https://intranet.alxswe.com/rltoken/Wy2djWXK5b4rnnYlAq_wlA)
+- [Learn to Program 9 : Object Oriented Programming](https://intranet.alxswe.com/rltoken/MxIOanLf5vG5QeCWek2nqQ)
+- [Python Classes and Objects](https://intranet.alxswe.com/rltoken/AoLH4xp5StrQST-Cu0Fg8w)
+- [Object Oriented Programming](https://intranet.alxswe.com/rltoken/-vVnWzwR3a3X0H8Oia78Ug)
 
-<p align="center">
-    <a href="#Synopsis">Synopsis</a> •
-    <a href="#Learning Objectives:">Learning Objectives</a> •
-    <a href="#General Considerations:">General Considerations</a> •
-    <a href="#Contact Information:">Learning Objectives</a> •
-</p>
+## Learning Objectives
 
+### General
 
-# 
+- Why Python programming is awesome
+- What is OOP
+- “first-class everything”
+- What is a class
+- What is an object and an instance
+- What is the difference between a class and an object or instance
+- What is an attribute
+- What are and how to use public, protected and private attributes
+- What is <code>self</code>
+- What is a method
+- What is the special <code>**init**</code> method and how to use it
+- What is Data Abstraction, Data Encapsulation, and Information Hiding
+- What is a property
+- What is the difference between an attribute and a property in Python
+- What is the Pythonic way to write getters and setters in Python
+- How to dynamically create arbitrary new attributes for existing instances of a class
+- How to bind attributes to object and classes
+- What is the <code>**dict**</code> of a class and/or instance of a class and what does it contain
+- How does Python find the attributes of an object or class
+- How to use the <code>getattr</code> function
 
-# Synopsis:
-#### Main Includes:
-TBU
+## Tasks
 
-
-### For Testing Includes:
-TBU
-
-#### Functions:
-##### Mandatory:
-> 0. TBU
-> 1. TBU
-
-##### Advanced:
-> TBU
-
-
-# Learning Objectives:
-
-> * TBU
-> * TBU
-
-# Functions Implemented:
-
-|             File Name                  |   Description    				   	| 
-|----------------------------------------|------------------------------------------------------|
-| 0-			 | 			|
-| 1-			 | 	|
-| 2-				 |    					|
-| 3-				 |    					|
-| 4-				 | 					|
-| 				 |    					|
-
-
-# General Considerations:
-> * TBU
-
-
-# Contact Information:
-
-<p align="center">
-Carlos Bentin -
-<a href="https://github.com/Benkdel">
-        <img src="https://img.shields.io/badge/Carlos-mainPage-blue">
-</a>
-</p>
+| Task                                   | File                                                     |
+| -------------------------------------- | -------------------------------------------------------- |
+| 0. My first square                     | [0-square.py](./0-square.py)                             |
+| 1. Square with size                    | [1-square.py](./1-square.py)                             |
+| 2. Size validation                     | [2-square.py](./2-square.py)                             |
+| 3. Area of a square                    | [3-square.py](./3-square.py)                             |
+| 4. Access and update private attribute | [4-square.py](./4-square.py)                             |
+| 5. Printing a square                   | [5-square.py](./5-square.py)                             |
+| 6. Coordinates of a square             | [6-square.py](./6-square.py)                             |
+| 7. Singly linked list                  | [100-singly_linked_list.py](./100-singly_linked_list.py) |
+| 8. Print Square instance               | [101-square.py](./101-square.py)                         |
+| 9. Compare 2 squares                   | [102-square.py](./102-square.py)                         |
+| 10. ByteCode -> Python #5              | [103-magic_class.py](./103-magic_class.py)               |

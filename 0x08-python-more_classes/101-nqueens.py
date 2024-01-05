@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import sys
 
-
 def solve_n_queens(N):
     def is_safe_to_place(pos, position_oc):
         for i in range(len(position_oc)):

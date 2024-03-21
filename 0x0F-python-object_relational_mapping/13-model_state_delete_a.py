@@ -1,20 +1,24 @@
 #!/usr/bin/python3
 """
-fecth data using sql alchemy
-deletes
+ a script that deletes all State objects with a name
+ containing the letter a from the database hbtn_0e_6_usa
+
 """
 
-if __name__ == "__main__":
-    from sys import argv as av
-    from model_state import State, Base
-    from sqlalchemy import create_engine
-    from sqlalchemy.orm import sessionmaker
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-                             av[1], av[2], av[3]), pool_pre_ping=True)
+import sys
+from model_state import Base, State
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+# should not be executed when imported
+if __name__ == '__main__':
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
+                           format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    instances = session.query(State).filter(State.name.like('%a%')).all()
-    for instance in instances:
-        session.delete(instance)
+    states_to_del = session.query(State).filter(State.name.like('%a%')).all()
+    for state in states_to_del:
+        session.delete(state)
     session.commit()

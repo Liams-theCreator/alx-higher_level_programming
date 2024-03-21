@@ -1,52 +1,90 @@
-# Project: 0x0F. Python - Object-relational mapping
+# README.md - SQLAlchemy ORM Project
 
-## Resources
+![SQLAlchemy Logo](https://www.sqlalchemy.org/img/sqla_logo.png)
 
-#### Read or watch:
+**Project Information**
 
-* [Object-relational mappers](https://intranet.alxswe.com/rltoken/a8DUOWhXpNX3TEwgyT-U8A)
-* [mysqlclient/MySQLdb documentation](https://intranet.alxswe.com/rltoken/JtFaKjnqxudr6Hi05Us1Lw)
-* [MySQLdb tutorial](https://intranet.alxswe.com/rltoken/TdUSYFNGbXJG1WjCEoq5FA)
-* [SQLAlchemy tutorial](https://intranet.alxswe.com/rltoken/YyL5hsscviNH04XGW-XpfA)
-* [SQLAlchemy](https://intranet.alxswe.com/rltoken/j9azWF2Db_2rNolTxOF3SA)
-* [mysqlclient/MySQLdb](https://intranet.alxswe.com/rltoken/0zLhY9KqKjn-zmdb7X598Q)
-* [Introduction to SQLAlchemy](https://intranet.alxswe.com/rltoken/pw50Bl1Bj84wksxm018dwA)
-* [Flask SQLAlchemy](https://intranet.alxswe.com/rltoken/B-xIdMtGvpus8vHxAIRrPg)
-* [10 common stumbling blocks for SQLAlchemy newbies](https://intranet.alxswe.com/rltoken/deIzPMrfK8Ixqm-AboFHWg)
-* [Python SQLAlchemy Cheatsheet](https://intranet.alxswe.com/rltoken/dZfUNK3lJicGMK5PU0bE7Q)
-* [SQLAlchemy ORM Tutorial for Python Developers](https://intranet.alxswe.com/rltoken/hNxBKC8lHge5XjsRO8ksHQ)
-* [SQLAlchemy Tutorial](https://intranet.alxswe.com/rltoken/5G_R2NmQRFqiZb84qxYERQ)
-* [Python Virtual Environments: A primer](https://intranet.alxswe.com/rltoken/OXle6kXpmD88D0WbgbTWqg)
-## Learning Objectives
+- Project: 0x0F. Python - Object-relational mapping
+- Technologies: Python, SQLAlchemy, MySQL
 
-### General
+**Before You Start...**
 
-* Why Python programming is awesome
-* How to connect to a MySQL database from a Python script
-* How to <code>SELECT</code> rows in a MySQL table from a Python script
-* How to <code>INSERT</code> rows in a MySQL table from a Python script 
-* What ORM means
-* How to map a Python Class to a MySQL table
-* How to create a Python Virtual Environment
-## Tasks
+Please make sure your MySQL server is in version 8.0. You can follow these steps to install MySQL 8.0 in Ubuntu 20.04:
 
-| Task | File |
-| ---- | ---- |
-| 0. Get all states | [0-select_states.py](./0-select_states.py) |
-| 1. Filter states | [1-filter_states.py](./1-filter_states.py) |
-| 2. Filter states by user input | [2-my_filter_states.py](./2-my_filter_states.py) |
-| 3. SQL Injection... | [3-my_safe_filter_states.py](./3-my_safe_filter_states.py) |
-| 4. Cities by states | [4-cities_by_state.py](./4-cities_by_state.py) |
-| 5. All cities by state | [5-filter_cities.py](./5-filter_cities.py) |
-| 6. First state model | [model_state.py](./model_state.py) |
-| 7. All states via SQLAlchemy | [7-model_state_fetch_all.py](./7-model_state_fetch_all.py) |
-| 8. First state | [8-model_state_fetch_first.py](./8-model_state_fetch_first.py) |
-| 9. Contains `a` | [9-model_state_filter_a.py](./9-model_state_filter_a.py) |
-| 10. Get a state | [10-model_state_my_get.py](./10-model_state_my_get.py) |
-| 11. Add a new state | [11-model_state_insert.py](./11-model_state_insert.py) |
-| 12. Update a state | [12-model_state_update_id_2.py](./12-model_state_update_id_2.py) |
-| 13. Delete states | [13-model_state_delete_a.py](./13-model_state_delete_a.py) |
-| 14. Cities in state | [model_city.py](./model_city.py), [14-model_city_fetch_by_state.py](./14-model_city_fetch_by_state.py) |
-| 15. City relationship | [relationship_city.py](./relationship_city.py), [relationship_state.py](./relationship_state.py), [100-relationship_states_cities.py](./100-relationship_states_cities.py) |
-| 16. List relationship | [101-relationship_states_cities_list.py](./101-relationship_states_cities_list.py) |
-| 17. From city | [102-relationship_cities_states_list.py](./102-relationship_cities_states_list.py) |
+```bash
+$ sudo apt-get install python3.8-venv
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ sudo apt-get install python3-dev
+$ sudo apt-get install libmysqlclient-dev
+$ sudo apt-get install zlib1g-dev
+$ sudo pip3 install mysqlclient
+$ python3
+>>> import MySQLdb
+>>> MySQLdb.version_info
+(2, 0, 3, 'final', 0)
+$ sudo pip3 install SQLAlchemy
+$ python3
+>>> import sqlalchemy
+>>> sqlalchemy.__version__
+'1.4.22'
+```
+
+**Project Overview**
+
+This project focuses on Object-Relational Mapping (ORM) using SQLAlchemy, a powerful library that bridges the gap between Python and databases. In this project, you will work with MySQL databases and perform various tasks using SQLAlchemy. The project is divided into multiple tasks, each building on the previous one.
+
+**Project Tasks**
+
+1. **Get all states**: Write a script to list all states from the database.
+
+2. **Filter states**: Write a script to list states with names starting with 'N'.
+
+3. **Filter states by user input**: Write a script to filter states by user input.
+
+4. **SQL Injection...**: Secure a script from SQL injection while filtering states.
+
+5. **Cities by states**: List all cities from the database.
+
+6. **First state model**: Create a State class and an instance of Base for ORM.
+
+7. **All states via SQLAlchemy**: List all State objects from the database.
+
+8. **First state**: Print the first State object from the database.
+
+9. **Contains `a`**: List all State objects containing the letter 'a'.
+
+10. **Get a state**: Print the State object with a given name.
+
+11. **Add a new state**: Add a new State object to the database.
+
+12. **Update a state**: Change the name of a State object.
+
+13. **Delete states**: Delete all State objects with names containing the letter 'a'.
+
+**Learning Objectives**
+
+By completing this project, you will achieve the following learning objectives:
+
+- Gain proficiency in using SQLAlchemy for database interaction.
+- Learn how to create and manipulate database tables.
+- Develop skills in querying and modifying data using ORM.
+- Understand how to handle user input and prevent SQL injection.
+
+**Requirements**
+
+-  vi, vim, emacs.
+- All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5).
+- Your files will be executed with MySQLdb version 2.0.x.
+- Your files will be executed with SQLAlchemy version 1.4.x.
+- Ensure all your files end with a new line.
+- The first line of all your files should be exactly `#!/usr/bin/python3`.
+**Install and Activate a Virtual Environment**
+
+To create a Python Virtual Environment, allowing you to install specific dependencies for this Python project, follow these steps:
+
+```bash
+$ sudo apt-get install python3.8-venv
+$ python3 -m venv venv
+$ source venv/bin/activate
+```

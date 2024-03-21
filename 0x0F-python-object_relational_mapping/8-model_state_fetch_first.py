@@ -1,24 +1,22 @@
 #!/usr/bin/python3
 """
-fetch data using sqlalchemy
-print only the first state
+Lists all State objects from the database hbtn_0e_6_usa
 """
+import sys
+from model_state import Base, State
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
-if __name__ == "__main__":
-    from sys import argv as av
-    from model_state import State, Base
-    from sqlalchemy import create_engine
-    from sqlalchemy.orm import sessionmaker
-
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-                             av[1], av[2], av[3]), pool_pre_ping=True)
+# should not be executed when imported
+if __name__ == '__main__':
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
+                           format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    count = session.query(State).count()
-    message = ""
-    if (count):
-        first_state = session.query(State).first()
-        message += str(first_state.id) + ": " + first_state.name
+
+    first_state = session.query(State).first()
+    if first_state:
+        print("{}: {}".format(first_state.id, first_state.name))
     else:
-        message = "Nothing"
-    print(message)
+        print('Nothing')

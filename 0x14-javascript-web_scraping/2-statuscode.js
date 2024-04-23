@@ -1,12 +1,10 @@
 #!/usr/bin/node
-// Status Of Get request
-
 const request = require('request');
 const url = process.argv[2];
-request.get(url, function (error, response) {
-  if (error) {
-    console.log(error);
+request(url, (err, response) => {
+  if (err) {
+    console.log(err);
   } else {
-    console.log('code:' + ' ' + response.statusCode);
+    console.log('code: ' + response.statusCode);
   }
 });
